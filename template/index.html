@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Write a Review</title>
+    <style>
+        body{
+            background-image: url(../static/movie4.jpeg);
+            width: 960px;
+            height: 480px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .form-box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            width: 544px;
+            height: 204px;
+            padding: 8px 8px 8px 8px;
+            background-color:#ffffff;
+            vertical-align: middle;
+            opacity:0.9;
+
+        }
+
+        .form-group {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+
+        .heading{
+            width: 315px;
+            height: 40px;
+            color: #000000;
+            font-family: "Helvetica";
+            font-weight: 700;
+            font-size: 32px;
+            text-align: center;
+            
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+
+        .input-review{
+            width: 414px;
+            height: 32px;
+            padding: 4px 8px 4px 8px;
+            background: #ffffff;
+            border-color: #232323;
+            border-width: 0.5px;
+            border-style: solid;
+            border-radius: 3px 3px 3px 3px;
+            font-family: "Helvetica";
+            font-weight: 400;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .custom-button{
+            width: 139px;
+            height: 37px;
+            padding: 0px 10px 0px 10px;
+            background: linear-gradient(to right, rgb(22, 157, 179) 0%, rgb(11, 77, 88) 100%);
+            color: #ffffff;
+            border-color: #0a5f78;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 3px 3px 3px 3px;
+            font-family: "Helvetica";
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="form-box">
+    </div>
+    <div class="form-group">
+         <h1 class="heading" style="margin-left: 20%; position: relative; ">Write a Movie Review</h1>
+        <form class="form-inline"  action="{{ url_for('index') }}" method="post" enctype="multipart/form-data">
+         
+            <input class="input-review"  type="text" name="review">
+            <br>
+            <br>
+            <input class="custom-button" style="opacity:1; margin-left: 30%;"  type="submit" value="Submit" >
+    </div>
+        </form>
+    
+    
+
+
+   
+
+</body>
+</html>

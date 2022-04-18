@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Prediction</title>
+
+    <style>
+        body{
+            background-image: url(../static/result_bg.png);
+            
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .form-box {
+            position: absolute;
+            width: 544px;
+            height: 304px;
+            padding: 8px 8px 8px 8px;
+            background-color:#ffffff;
+            vertical-align: middle;
+            opacity:0.6;
+            margin-left: 900px;
+            border-radius: 15px;
+        }
+
+        .result-box{
+            position: absolute;
+            margin-left: 900px;
+        }
+
+        .result-box > * {
+            margin-left: 40px;
+        }
+
+        .custom-button-2{
+           
+            width: 120px;
+            height: 80px;
+            padding: 0px 10px 0px 10px;
+            background: linear-gradient(to right, rgb(183, 28, 28) 0%, rgb(95, 14, 14) 100%);
+            color: #ffffff;
+            border-color: #8a0602;
+            border-width: 1px;
+            border-style: solid;
+            border-radius: 10px;
+            font-family: "Helvetica";
+            font-weight: 400;
+            padding: 7px;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+
+        }
+
+        .ack{
+           font-family: Lucida Console;
+           font-size: 30px;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="form-box">
+    </div>
+
+    <div class="result-box" >
+        
+          <h1>Given Review : {{ review }}</h1>
+
+          <h1>Predicted Sentiment: {{ sentiment }}</h1>
+
+          <h1>Predicted Output: {{ result }}</h1>
+
+          <h3>Note : {{ description }}</h3>
+          <br>
+        
+        <a href="{{ url_for('index') }}" class="custom-button-2">Back</a>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1  class="ack">Thank you for your feedback!</h1> 
+    </div>
+    
+     
+    
+</body>
+</html>
